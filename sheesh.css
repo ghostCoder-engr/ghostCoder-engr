@@ -1,0 +1,226 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('back.jpg');
+    background-color: #f9f9f9;
+    color: #1f1d1d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.header {
+    background-color: rgb(6, 25, 41);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color:  rgb(6, 25, 41);
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 20px;
+    border: 3px solid #0364e4;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.container > * {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.page {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, rgb(2, 47, 73), #0683bd);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.input-group {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column; /* Align elements vertically */
+    width: 100%; /* Ensure it spans the full width of the parent container */
+    box-sizing: border-box; /* Prevent padding from affecting total width */
+}
+
+input[type="number"] {
+    width: 100%; /* Full width inside the container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.makeitcenter{
+    text-align: center;
+}
+
+.instruction {
+    text-align: center;
+    font-size: small;
+    color: #666;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.result {
+    margin-top: 15px;
+    font-weight: bold;
+    padding: 15px;
+    background: #e8f4ff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+pre {
+    background: #acd4fa;
+    padding: 15px;
+    font-size: medium;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    font-size: medium;
+    padding: 5px;
+    background-color: rgb(6, 25, 41);
+    color: white;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgb(2, 47, 73);
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+    
+    .navbar.show {
+        display: flex;
+    }
+    
+    .content-wrapper {
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .container > * {
+        max-width: 100%;
+    }
+    
+}
